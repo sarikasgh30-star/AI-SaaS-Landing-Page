@@ -44,8 +44,25 @@ nav a{
     align-items:center;
     text-align:center;
     padding:20px;
+    background: linear-gradient(
+        -45deg,
+        #4f46e5,
+        #7c3aed,
+        #06b6d4,
+        #3b82f6
+    );
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite;
 }
-
+.hero-content{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    max-width: 700px;
+}
 .hero h1{
     font-size:3rem;
     margin-bottom:20px;
@@ -105,4 +122,15 @@ footer{
 
 .light nav a{
     color:black;
+}
+@keyframes gradientAnimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
